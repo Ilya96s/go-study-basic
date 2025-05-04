@@ -3,23 +3,36 @@ package main
 import "fmt"
 
 func main() {
-	var num int = 123
-	var text string = "Text"
-	var drob float64 = 1.23
-	var boolean bool = true
+	number := 15
+	text := "Hello"
+	drob := 11.25
+	boolean := true
 
-	fmt.Println(num)
-	fmt.Println(text)
-	fmt.Println(drob)
-	fmt.Println(boolean)
+	// сложение
+	number = number + 10
+	number += 15
+	number++
 
-	var secondSum int
-	var secondtext string
-	var seconddrob float64
-	var secondboolean bool
+	// умножение
+	number = number * 100
+	number *= 5
 
-	fmt.Println(secondSum)
-	fmt.Println(secondtext)
-	fmt.Println(seconddrob)
-	fmt.Println(secondboolean)
+	// деление
+	number = number / 10
+	number /= 5
+
+	// вычитание
+	drob = drob - 1.05
+	drob -= 4.2
+	drob--
+
+	// конкатенация
+	text = text + "World"
+	text += "!"
+
+	// вывод в консоль
+	fmt.Println("number:", number)
+	fmt.Println("text:", text)
+	fmt.Println("drob:", drob)
+	fmt.Println("boolean:", boolean)
 }
