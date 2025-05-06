@@ -3,11 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	liters := 2.0
+	beerDelicious := true
+	croutonsDelicious := true
 
-	if liters > 3.0 {
-		fmt.Println("Liters less than 3.0")
+	if beerDelicious || croutonsDelicious {
+		fmt.Println("We're going for a walk")
 	} else {
-		fmt.Println("Liters greater than 3.0")
+		fmt.Println("We're not going out")
 	}
 }
