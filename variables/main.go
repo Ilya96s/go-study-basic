@@ -4,23 +4,24 @@ import "fmt"
 
 func main() {
 	number := 5
-	numberPointer := &number
+	var notNilPtr *int = &number
+	var nilPtr *int
 
-	str := "hello"
-	strPointer := &str
+	fmt.Print("Not nil pointer: ")
+	foo(notNilPtr)
 
-	fmt.Println("number до вызова foo:", number)
-	foo(numberPointer)
-	fmt.Println("number после вызова foo:", number)
+	fmt.Println("")
 
-	fmt.Println("number до вызова bar:", str)
-	bar(strPointer)
-	fmt.Println("number после вызова bar:", str)
+	fmt.Print("nil pointer: ")
+	foo(nilPtr)
 }
 
-func foo(ptr *int) {
-	*ptr = 4444
-}
-func bar(ptr *string) {
-	*ptr = "new string"
+func foo(intPtr *int) {
+	fmt.Println("Указатель:", intPtr)
+
+	if intPtr != nil {
+		fmt.Println("Значение переменной, на которую указывает указатель:", *intPtr)
+	} else {
+		fmt.Println("Указатель является nil-указателем, а значит я не могу его безопасно разыменовать")
+	}
 }
