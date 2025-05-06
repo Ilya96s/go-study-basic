@@ -3,33 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	defer func() {
-		fmt.Println("main Defer1")
-	}()
-	defer func() {
-		fmt.Println("main Defer2")
-	}()
-	defer func() {
-		fmt.Println("main Defer3")
-	}()
+	number := 5
+	numberPointer := &number
 
-	fmt.Println("до вызова foo")
-	foo()
-	fmt.Println("после вызова foo")
+	foo(numberPointer)
 }
 
-func foo() {
-	defer func() {
-		fmt.Println("foo Defer1")
-	}()
-
-	defer func() {
-		fmt.Println("foo Defer2")
-	}()
-
-	defer func() {
-		fmt.Println("foo Defer3")
-	}()
-
-	fmt.Println("foo")
+func foo(ptr *int) {
+	fmt.Println("Указатель", ptr)
+	fmt.Println("Значение указателя:", *ptr)
 }
