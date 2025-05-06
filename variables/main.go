@@ -1,17 +1,25 @@
 package main
 
-import "github.com/k0kubun/pp"
-
-type User struct {
-	Name string
-	Age  int
-}
+import (
+	"fmt"
+	"github.com/k0kubun/pp"
+	"study/greeting"
+	"study/user"
+)
 
 func main() {
-	user := User{
-		Name: "Василий",
-		Age:  67,
+	greeting.SayHello()
+	i := greeting.GiveMeInt()
+	fmt.Println("i:", i)
+
+	u := user.User{
+		Name: "Григорий",
+		// age не видно, потому что age private
 	}
 
-	pp.Println(user)
+	u.ChangeAge(50)
+	// changeName не видно, потому что changeName private
+	// user.changeName
+
+	pp.Println("user:", u)
 }
