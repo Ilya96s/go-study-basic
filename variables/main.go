@@ -3,12 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	beerDelicious := true
-	croutonsDelicious := true
+	weather := 5
 
-	if beerDelicious || croutonsDelicious {
-		fmt.Println("We're going for a walk")
-	} else {
-		fmt.Println("We're not going out")
+	if weather != +3 {
+		fmt.Println("Сегодня я буду участвовать в гонке!")
 	}
 }
