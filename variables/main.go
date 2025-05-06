@@ -2,16 +2,25 @@ package main
 
 import "fmt"
 
+// 10
+var number int = 10
+
 func main() {
-	greeting("")
-	greeting("Иван")
+	// 15
+	number += 5
+
+	foo()
+	boo()
+
+	fmt.Println("number:", number)
 }
 
-func greeting(name string) {
-	if name == "" {
-		fmt.Println("Вы передали пустое имя.")
-		return
-	}
+func foo() {
+	// 30
+	number *= 2
+}
 
-	fmt.Println("Привет, уважаемый", name)
+func boo() {
+	// 3
+	number /= 10
 }
