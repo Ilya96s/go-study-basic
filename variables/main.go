@@ -3,26 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	score := 0
-
-	fmt.Println("Get ready")
-	fmt.Println("Score:", score)
+	fmt.Println("Начинаю генерировать уровень!")
 	fmt.Println("")
 
-	for i := 1; i <= 10; i++ {
-		fmt.Println("----------------")
-		fmt.Println("Вы подлетаете к трубе", i)
-		fmt.Println("")
+	for i := 1; i <= 5; i++ {
+		fmt.Println("Труба номер", i)
+		fmt.Println("----")
 
-		fmt.Println("Вы пролетаете трубу", i)
-		fmt.Println("")
+		if i%2 == 0 {
+			fmt.Println("🛢🛢")
+		} else {
+			fmt.Println("🔋🔋")
+		}
 
-		fmt.Println("Вы пролетели трубу", i)
-		fmt.Println("")
-
-		score++
-
-		fmt.Println("Score:", score)
+		fmt.Println("----")
 		fmt.Println("")
 	}
+
+	fmt.Println("Генерация уровня окончена!")
 }
