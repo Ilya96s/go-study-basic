@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Сейчас начнется вызов функции sayHello()")
-	sayHello()
+	square(2)
 }
-func sayHello() {
-	fmt.Println("Hello World")
+func square(x int) {
+	fmt.Println("x:", x)
+	fmt.Println("x в квадрате:", x*x)
 }
