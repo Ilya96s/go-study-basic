@@ -3,13 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	age := 25
+	liters := 2.0
 
-	if age >= 30 {
-		fmt.Println("Age is greater than 30")
-	} else if age <= 12 {
-		fmt.Println("Age is less than 12")
+	if liters > 3.0 {
+		fmt.Println("Liters less than 3.0")
 	} else {
-		fmt.Println("Age is over 12 but under 30")
+		fmt.Println("Liters greater than 3.0")
 	}
 }
